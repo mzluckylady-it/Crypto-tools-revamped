@@ -47,5 +47,7 @@ Script breakECDSA.py reconstructs the signed message for each to find the Z valu
 ---
 ### All content will be saved in a file: "signatures.json"
 
+    chmod +x getbalance.sh
 
+    ./getbalance.sh
 
