@@ -51,3 +51,5 @@ Script breakECDSA.py reconstructs the signed message for each to find the Z valu
 
     ./getbalance.sh
 
+    pip3 install numpy
+
