@@ -52,4 +52,31 @@ Script breakECDSA.py reconstructs the signed message for each to find the Z valu
     ./getbalance.sh
 
     pip3 install numpy
+    
+    apt-get update
 
+sudo apt-get install g++ -y
+
+sudo apt-get install libgmp3-dev libmpfr-dev -y
+
+wget https://ftp.openssl.org/source/old/0.9.x/openssl-0.9.8c.tar.gz
+
+tar xfz openssl-0.9.8c.tar.gz
+
+mv openssl-0.9.8c openssl-0.9.8c-vuln
+
+cd openssl-0.9.8c-vuln
+
+ls -lh
+
+patch -p1 <../make-OpenSSL-0-9-8c-vulnerable-again.diff
+
+./Configure linux-x86_64 shared no-ssl2 no-ssl3 no-comp no-asm
+
+make depend all
+
+cd /
+
+ls
+
+cd content
